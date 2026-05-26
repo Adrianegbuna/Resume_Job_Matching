@@ -93,3 +93,7 @@
     font-weight: 500;
     color: #495057;
 }
+
+.match-candidates-form {
+    display: inline;
+}
