@@ -55,7 +55,10 @@
         <a href="{% url 'edit_job' job.id %}" class="btn btn-primary">Edit Job</a>
         <a href="{% url 'toggle_job_status' job.id %}" class="btn btn-warning">{{ job.is_active|yesno:"Deactivate,Activate" }}</a>
         <a href="{% url 'delete_job' job.id %}" class="btn btn-danger">Delete</a>
-        <a href="{% url 'match_candidates' job.id %}" class="btn btn-success">Run Matching</a>
+        <form class="match-candidates-form" action="{% url 'match_candidates' job.id %}" method="post">
+        {% csrf_token %}
+          <button type="submit" class="btn btn-success">Run Matching</button>
+        </form>
     </div>
     {% endif %}
 
