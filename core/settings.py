@@ -20,6 +20,7 @@ SECRET_KEY = config("SK")
 DEBUG = False
 
 ALLOWED_HOSTS = ['resumejobmatching-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://resumejobmatching-production.up.railway.app']
 
 
 
