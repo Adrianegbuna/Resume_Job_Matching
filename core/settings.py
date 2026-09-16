@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from decouple import Config
+from decouple import config
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -14,12 +14,12 @@ MEDIA_URL = '/media/'
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = Config("SK")
+SECRET_KEY = config("SK")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['job-matcher-62p6.onrender.com']
+ALLOWED_HOSTS = ['resumejobmatching-production.up.railway.app']
 
 
 
